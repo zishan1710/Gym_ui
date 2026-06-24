@@ -1,0 +1,1171 @@
+/*==================================================
+  28 FITNESS
+  Premium Responsive Stylesheet
+  Part 1
+==================================================*/
+
+/*========================
+Google Font
+=========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*========================
+CSS VARIABLES
+=========================*/
+
+:root {
+
+    --primary: #e50914;
+    --secondary: #1b1b1b;
+    --dark: #111111;
+    --light: #ffffff;
+    --gray: #bdbdbd;
+    --card: #1d1d1d;
+
+    --transition: .35s ease;
+
+    --radius: 18px;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+
+}
+
+/*========================
+RESET
+=========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(180deg, #000, #320000, #000);
+
+    color: #fff;
+
+    overflow-x: hidden;
+
+    line-height: 1.7;
+
+}
+
+/*========================
+SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #000;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+/*========================
+COMMON
+=========================*/
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+a {
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+section {
+
+    padding: 80px 0;
+
+}
+
+.container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*========================
+HEADINGS
+=========================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+p {
+
+    color: #d5d5d5;
+
+}
+
+/*========================
+NAVBAR
+=========================*/
+
+.navbar {
+
+    background: rgba(0, 0, 0, .65);
+
+    backdrop-filter: blur(14px);
+
+    padding: 16px 0;
+
+    transition: .4s;
+
+}
+
+.logo-text {
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.navbar-brand {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.navbar-brand img {
+
+    border: 2px solid var(--primary);
+
+}
+
+.nav-link {
+
+    color: #fff !important;
+
+    font-weight: 500;
+
+    margin-left: 12px;
+
+    padding: 10px 18px !important;
+
+    border-radius: 40px;
+
+    transition: var(--transition);
+
+}
+
+.nav-link:hover {
+
+    background: var(--primary);
+
+    color: #fff !important;
+
+}
+
+.btn-danger {
+
+    background: var(--primary);
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-danger:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(229, 9, 20, .35);
+
+}
+
+.btn-outline-light {
+
+    border-radius: 50px;
+
+    padding: 12px 28px;
+
+    font-weight: 600;
+
+}
+
+/*========================
+HERO
+=========================*/
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(229, 9, 20, .08);
+
+    top: -150px;
+
+    right: -100px;
+
+    filter: blur(30px);
+
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .04);
+
+    bottom: -120px;
+
+    left: -80px;
+
+    filter: blur(40px);
+
+}
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    line-height: 1.2;
+
+}
+
+.hero h5 {
+
+    letter-spacing: 3px;
+
+}
+
+.hero p {
+
+    font-size: 18px;
+
+    max-width: 520px;
+
+}
+
+.hero-image {
+
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+/*========================
+CAROUSEL
+=========================*/
+
+.carousel {
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.carousel-control-prev-icon,
+
+.carousel-control-next-icon {
+
+    background-color: rgba(0, 0, 0, .4);
+
+    padding: 22px;
+
+    border-radius: 50%;
+
+}
+
+/*========================
+SCROLL DOWN
+=========================*/
+
+.scroll-down {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    font-size: 30px;
+
+    animation: floatDown 1.5s infinite;
+
+}
+
+.scroll-down a {
+
+    color: #fff;
+
+}
+
+@keyframes floatDown {
+
+    0% {
+
+        transform: translate(-50%, 0);
+
+    }
+
+    50% {
+
+        transform: translate(-50%, 10px);
+
+    }
+
+    100% {
+
+        transform: translate(-50%, 0);
+
+    }
+
+}
+
+/*========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:992px) {
+
+    .hero {
+
+        text-align: center;
+
+    }
+
+    .hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+    .hero p {
+
+        margin: auto;
+
+    }
+
+    .hero-image {
+
+        height: 420px;
+
+        margin-top: 40px;
+
+    }
+
+    .navbar {
+
+        padding: 12px 0;
+
+    }
+
+    .nav-link {
+
+        margin: 8px 0;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .hero {
+
+        padding-top: 120px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+    .hero h5 {
+
+        font-size: 15px;
+
+    }
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+    .hero-image {
+
+        height: 300px;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+        margin-bottom: 15px;
+
+    }
+
+    .logo-text {
+
+        font-size: 1.2rem;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .hero h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .hero-image {
+
+        height: 230px;
+
+    }
+
+    section {
+
+        padding: 60px 0;
+
+    }
+
+}
+
+
+
+/*==================================================
+  28 FITNESS
+  Premium Responsive Stylesheet
+  Part 2
+==================================================*/
+
+/*=========================================
+WHY CHOOSE US
+=========================================*/
+
+#whychoose {
+    position: relative;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: var(--radius);
+    padding: 40px 25px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary);
+    box-shadow: 0 18px 35px rgba(229, 9, 20, .35);
+}
+
+.feature-icon {
+    font-size: 60px;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.feature-card h4 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #d8d8d8;
+    font-size: 15px;
+    margin: 0;
+}
+
+/*=========================================
+FITNESS STATS
+=========================================*/
+
+.stats-section {
+    background: linear-gradient(90deg, #090909, #181818, #090909);
+}
+
+.stats-section h2 {
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.stats-section p {
+    color: #d7d7d7;
+    font-size: 17px;
+    margin: 0;
+}
+
+/*=========================================
+MEMBERSHIP
+=========================================*/
+
+#plans {
+    position: relative;
+}
+
+.plan-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.plan-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary);
+}
+
+.plan-card h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.plan-card h1 {
+    color: var(--primary);
+    font-size: 48px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.plan-card ul li {
+    color: #d8d8d8;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    font-size: 15px;
+}
+
+.plan-card ul li:last-child {
+    border-bottom: none;
+}
+
+.plan-card .btn {
+    border-radius: 50px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+/*=========================================
+POPULAR PLAN
+=========================================*/
+
+.popular {
+    transform: scale(1.05);
+    border: 2px solid var(--primary);
+}
+
+.popular:hover {
+    transform: scale(1.08);
+}
+
+.popular .badge {
+    position: absolute;
+    top: 18px;
+    right: -40px;
+    width: 150px;
+    transform: rotate(45deg);
+    font-size: 13px;
+    padding: 8px;
+}
+
+/*=========================================
+PREMIUM PLAN
+=========================================*/
+
+.premium {
+    background: linear-gradient(180deg, #2c1a00, #111, #2c1a00);
+    border: 2px solid gold;
+}
+
+.premium h1 {
+    color: gold;
+}
+
+.premium .btn {
+    background: gold;
+    color: #000;
+    border: none;
+    font-weight: 700;
+}
+
+.premium .btn:hover {
+    background: #ffdd33;
+}
+
+.premium .badge {
+    position: absolute;
+    top: 18px;
+    right: -45px;
+    width: 160px;
+    transform: rotate(45deg);
+    padding: 8px;
+    font-size: 13px;
+}
+
+/*=========================================
+SECTION TITLES
+=========================================*/
+
+section h2 {
+    letter-spacing: 1px;
+}
+
+section p.lead {
+    max-width: 700px;
+    margin: auto;
+}
+
+/*=========================================
+CARD ANIMATION
+=========================================*/
+
+.feature-card,
+.plan-card {
+    animation: fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:992px) {
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-10px);
+    }
+
+    .plan-card {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .feature-icon {
+        font-size: 48px;
+    }
+
+    .plan-card h1 {
+        font-size: 40px;
+    }
+
+    .plan-card h3 {
+        font-size: 24px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .feature-card {
+        padding: 25px 18px;
+    }
+
+    .feature-icon {
+        font-size: 42px;
+    }
+
+    .stats-section h2 {
+        font-size: 2rem;
+    }
+
+    .plan-card {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/*==================================================
+  28 FITNESS
+  Premium Responsive Stylesheet
+  Part 3
+==================================================*/
+
+/*==========================
+TRAINERS
+==========================*/
+
+#trainers {
+    background: linear-gradient(180deg, #090909, #151515, #090909);
+}
+
+.trainer-card {
+    background: #1b1b1b;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all .4s ease;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .35);
+    height: 100%;
+}
+
+.trainer-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(229, 9, 20, .35);
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.trainer-card:hover img {
+    transform: scale(1.08);
+}
+
+.trainer-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.trainer-info h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.trainer-info p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.trainer-info i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    background: #262626;
+    color: #fff;
+    margin: 0 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.trainer-info i:hover {
+    background: var(--primary);
+    transform: translateY(-4px);
+}
+
+/*==========================
+GALLERY
+==========================*/
+
+.gallery-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: .4s;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/*==========================
+TESTIMONIALS
+==========================*/
+
+.testimonial-card {
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    transition: .35s;
+    border: 1px solid rgba(255, 255, 255, .08);
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/*==========================
+CTA
+==========================*/
+
+.cta-section {
+    background: linear-gradient(135deg, #8b0000, #000);
+    border-radius: 30px;
+    margin: 80px auto;
+}
+
+.cta-section .btn {
+    padding: 15px 45px;
+    font-size: 18px;
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+.footer {
+    background: #090909;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #bfbfbf;
+}
+
+.footer-link {
+    display: inline-block;
+    color: #d9d9d9;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-link:hover {
+    color: var(--primary);
+    padding-left: 8px;
+}
+
+.footer hr {
+    margin: 35px 0;
+}
+
+/*==========================
+ANIMATIONS
+==========================*/
+
+.fade-up {
+    animation: fadeUp .8s ease forwards;
+}
+
+.zoom-in {
+    animation: zoomIn .7s ease forwards;
+}
+
+@keyframes zoomIn {
+
+    from {
+
+        opacity: 0;
+        transform: scale(.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+}
+
+.float {
+
+    animation: floating 3s ease-in-out infinite;
+
+}
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/*==========================
+UTILITY CLASSES
+==========================*/
+
+.text-gradient {
+    background: linear-gradient(90deg, #ff2d2d, #ff7a18);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shadow-red {
+    box-shadow: 0 15px 35px rgba(229, 9, 20, .3);
+}
+
+.rounded-xl {
+    border-radius: 25px;
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:1200px) {
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media(max-width:992px) {
+
+    .trainer-card img {
+        height: 350px;
+    }
+
+    .gallery-img {
+        height: 240px;
+    }
+
+    .cta-section {
+        margin: 50px 15px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .trainer-card img {
+        height: 300px;
+    }
+
+    .gallery-img {
+        height: 220px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .col-lg-4 {
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .trainer-card img {
+        height: 250px;
+    }
+
+    .gallery-img {
+        height: 180px;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section .btn {
+        width: 100%;
+    }
+
+}
+
+/*==========================
+SELECTION
+==========================*/
+
+::selection {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleEffect .6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    from {
+        width: 0;
+        height: 0;
+        opacity: .7;
+    }
+
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
